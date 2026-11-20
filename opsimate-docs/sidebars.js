@@ -8,18 +8,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
-      collapsed: false, // This keeps the section OPEN by default
+      collapsed: false,
       items: [
-        {
-          type: 'doc',
-          id: 'intro',
-          label: 'Welcome to OpsiMate',
-        },
-        {
-          type: 'doc',
-          id: 'getting-started/introduction',
-          label: 'Core Features',
-        },
+        { type: 'doc', id: 'intro', label: 'Welcome to OpsiMate' },
+        { type: 'doc', id: 'getting-started/introduction', label: 'Core Features' },
       ],
     },
 
@@ -29,6 +21,7 @@ const sidebars = {
       label: 'Get Started',
       collapsed: true,
       items: [
+        'getting-started/configuration',
         'getting-started/quick-start', 
       ],
     },
@@ -84,17 +77,19 @@ const sidebars = {
       ],
     },
 
-    // 5. Respond (Coming soon - uncomment when Enrichments PR is merged)
-    /*
+    // 5. Respond
     {
       type: 'category',
       label: 'Respond',
       collapsed: true,
       items: [
         'alerts/enrichments',
+        'alerts/actions',
+        'alerts/silences-and-mute-policies',
+        'alerts/root-cause-analysis',
+        'alerts/insights',
       ],
     },
-    */
 
     // 6. Configure
     {
@@ -119,7 +114,7 @@ const sidebars = {
       ],
     },
     
-    // Extra pages (standalone links at the bottom)
+    // Extra pages
     'glossary/index',
     'faq/index',
     'legal/privacy',

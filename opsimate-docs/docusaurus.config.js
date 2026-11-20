@@ -2,14 +2,23 @@
 module.exports = {
   title: 'OpsiMate',
   tagline: 'One console for servers, Docker, and Kubernetes',
-  url: 'https://your-site.com',
+  url: 'https://docs.opsimate.dev',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'OpsiMate',
   projectName: 'documentation',
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  // 'throw' so a broken link fails CI instead of scrolling past in build
+  // output. Two links to a page deleted months earlier survived this way.
+  onBrokenLinks: 'throw',
+
+  markdown: {
+    hooks: {
+      // Moved from the top-level onBrokenMarkdownLinks, which Docusaurus 3.10
+      // deprecates and v4 removes.
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   presets: [
     [
@@ -24,6 +33,11 @@ module.exports = {
         },
         blog: false,
         theme: { customCss: require.resolve('./src/css/custom.css') },
+        sitemap: {
+          // /search is the Algolia results page -- it has no content of its
+          // own, and Google reports it as "Crawled - currently not indexed".
+          ignorePatterns: ['/search'],
+        },
         // REMOVE gtag config here - we're using custom component instead
       },
     ],
@@ -46,7 +60,7 @@ module.exports = {
         { type: 'doc', docId: 'integrations/overview', position: 'left', label: 'Integrations' },
         { type: 'doc', docId: 'user-management/register-login', position: 'left', label: 'User Management' },
         { 
-          href: 'https://www.opsimate.com/', 
+          href: 'https://www.opsimate.dev/', 
           label: 'Website', 
           position: 'left' 
          },
@@ -155,7 +169,7 @@ module.exports = {
           items: [
             {
               label: 'Main Website',
-              href: 'https://www.opsimate.com/',
+              href: 'https://www.opsimate.dev/',
             },
             {
               label: 'Documentation',
