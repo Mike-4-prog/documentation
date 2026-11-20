@@ -4,23 +4,47 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
   tutorialSidebar: [
-    // Getting Started
+    // 1. Overview
     {
       type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
+      label: 'Overview',
+      collapsed: false, // This keeps the section OPEN by default
       items: [
-        'getting-started/introduction',
-        'getting-started/quick-start',
+        {
+          type: 'doc',
+          id: 'intro',
+          label: 'Welcome to OpsiMate',
+        },
+        {
+          type: 'doc',
+          id: 'getting-started/introduction',
+          label: 'Core Features',
+        },
       ],
     },
 
-    // Providers & Services
+    // 2. Get Started
     {
       type: 'category',
-      label: 'Providers & Services',
+      label: 'Get Started',
       collapsed: true,
       items: [
+        'getting-started/quick-start', 
+      ],
+    },
+
+    // 3. Integrate
+    {
+      type: 'category',
+      label: 'Integrate',
+      collapsed: true,
+      items: [
+        'integrations/overview',
+        'integrations/grafana',
+        'integrations/datadog',
+        'integrations/gcp',
+        'integrations/uptime-kuma',
+        'integrations/zabbix',
         'providers-services/overview',
         {
           type: 'category',
@@ -46,48 +70,36 @@ const sidebars = {
       ],
     },
 
-    // Integrations
+    // 4. Monitor
     {
       type: 'category',
-      label: 'Integrations',
-      collapsed: true,
-      items: [
-        'integrations/overview',
-        'integrations/grafana',
-        'integrations/datadog',
-        'integrations/gcp',
-        'integrations/uptime-kuma',
-        'integrations/zabbix',
-      ],
-    },
-
-    // Dashboards
-    {
-      type: 'category',
-      label: 'Dashboards',
-      collapsed: true,
-      items: [
-        'dashboards/saved-dashboards',
-      ],
-    },
-
-    // Alerts
-    {
-      type: 'category',
-      label: 'Alerts',
+      label: 'Monitor',
       collapsed: true,
       items: [
         'alerts/adding-alerts',
         'alerts/alert-management',
-        'alerts/archived-alerts',
         'alerts/tv-mode-view',
+        'dashboards/saved-dashboards',
+        'alerts/archived-alerts',
       ],
     },
 
-    // User Management
+    // 5. Respond (Coming soon - uncomment when Enrichments PR is merged)
+    /*
     {
       type: 'category',
-      label: 'User Management',
+      label: 'Respond',
+      collapsed: true,
+      items: [
+        'alerts/enrichments',
+      ],
+    },
+    */
+
+    // 6. Configure
+    {
+      type: 'category',
+      label: 'Configure',
       collapsed: true,
       items: [
         'user-management/register-login',
@@ -96,9 +108,18 @@ const sidebars = {
       ],
     },
 
-    // Single-page sections (not collapsible)
-    'development',
-    'contributing/index',
+    // 7. Develop
+    {
+      type: 'category',
+      label: 'Develop',
+      collapsed: true,
+      items: [
+        'development',
+        'contributing/index',
+      ],
+    },
+    
+    // Extra pages (standalone links at the bottom)
     'glossary/index',
     'faq/index',
     'legal/privacy',
