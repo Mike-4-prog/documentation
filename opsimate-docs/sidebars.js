@@ -33,33 +33,12 @@ const sidebars = {
       collapsed: true,
       items: [
         'integrations/overview',
+        'integrations/custom-alerts',
         'integrations/grafana',
         'integrations/datadog',
         'integrations/gcp',
         'integrations/uptime-kuma',
         'integrations/zabbix',
-        'providers-services/overview',
-        {
-          type: 'category',
-          label: 'Providers',
-          collapsed: true,
-          items: [
-            'providers-services/providers/add-provider',
-            'providers-services/providers/server-provider',
-            'providers-services/providers/kubernetes-provider',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Services',
-          collapsed: true,
-          items: [
-            'providers-services/services/add-services',
-            'providers-services/services/container-services',
-            'providers-services/services/systemd-services',
-            'providers-services/services/kubernetes-pods',
-          ],
-        },
       ],
     },
 
@@ -86,8 +65,6 @@ const sidebars = {
         'alerts/enrichments',
         'alerts/actions',
         'alerts/silences-and-mute-policies',
-        'alerts/root-cause-analysis',
-        'alerts/insights',
       ],
     },
 
@@ -110,14 +87,8 @@ const sidebars = {
       collapsed: true,
       items: [
         'development',
-        'contributing/index',
       ],
     },
-    
-    // Extra pages
-    'glossary/index',
-    'faq/index',
-    'legal/privacy',
   ],
 };
 
