@@ -10,7 +10,7 @@ Set up an enrichment to add tags, links, or a rewritten summary to alerts that m
 
 Ensure the following are in place:
 
-1. OpsiMate is installed and running, and you are signed in as an admin or a user with permission to configure features. If you have not installed it yet, see [Deploy](../getting-started/deploy.md).
+1. OpsiMate is installed and running, and you are signed in as an admin or a user with permission to configure features. If you have not installed it yet, see [Quick Start](../getting-started/quick-start.md)
 
 2. Alerts must already be flowing into OpsiMate, so that there is something to enrich. If you have not connected a source yet, see [Integrations Overview](../integrations/overview.md).
 
